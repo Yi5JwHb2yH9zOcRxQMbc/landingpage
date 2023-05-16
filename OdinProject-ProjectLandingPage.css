@@ -1,48 +1,220 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+.flex-container {
+  display: flex;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* this selector selects all divs inside of .flex-container */
+.flex-container div {
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 100px;
+  flex: 1 1 0%;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+/* only div.two is selected here */
+.flex-container .two {
+  flex: 2 1 0%;
 }
-body {
-	line-height: 1;
+
+.flex-container2 {
+  display: flex;
 }
-ol, ul {
-	list-style: none;
+
+/* this selector selects all divs inside of .flex-container */
+.flex-container2 div {
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 100px;
+  width: 250px;
+  flex: 1 1 auto;
 }
-blockquote, q {
-	quotes: none;
+
+.flex-container2 .two {
+  flex-shrink: 0;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+.flex-container3 {
+  display: flex;
+  flex-direction: column;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+/* this selector selects all divs inside of .flex-container */
+.flex-container3 div {
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 80px;
+  flex: 1 1 auto;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+  padding: 5px;
+}
+
+.center2 {
+  margin: auto;
+  width: 80%;
+  padding-top: 75px;
+}
+
+.container {
+  height: 300px;
+  width: 65%;
+  padding: 8px;
+  background: rgb(40, 40, 48);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.container1 {
+  height: 175px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1px;
+  width: 65%;
+  padding-bottom: 30px;
+}
+
+.container2 {
+  height: 30px;
+  width: 65%;
+  padding: 16px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container3 {
+  height: 250px;
+  width: 65%;
+  padding: 16px;
+  background: rgb(179, 177, 177);
+  border: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: bottom;
+  align-items: bottom;
+}
+
+.container5 {
+  text-align: bottom;
+  align-items: bottom;
+}
+
+.item {
+  width: 60px;
+  height: 60px;
+  border: 4px solid darkslategray;
+  background: skyblue;
+  gap: 3px;
+}
+
+.item1 {
+  height: 40%;
+  background-image: url("5a.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: 80px;
+  border: 5px solid purple;
+  width: 33%;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+ 
+}
+
+.item1a {
+	height: 40%;
+	background: rgb(210, 210, 210);
+	margin-left: auto;
+	margin-right: 80px;
+	border: 5px solid;
+	width: 33%;
+	padding: 30px;
+	text-align: center;
+	align-items: center;
+   }
+
+.item2 {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgb(31, 41, 240);
+  border-radius: 5%;
+  margin: 15px;
+}
+
+.media {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.media .content {
+  flex: 1;
+  padding: 10px;
+  border: 4px solid indigo;
+}
+
+
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper input[type="text"] {
+  flex: 1 1 auto;
+}
+
+.box {
+  margin-top: 100px;
+  margin-bottom: auto;
+  border: 1px solid;
+  padding: 0;
+  width: 65%;
+}
+.pushr {
+  margin-left: auto;
+}
+
+.pushr2 {
+  margin-left: auto;
+  margin-right: 80px;
+  border: 5px solid;
+  width: 33%;
+  padding: 30px;
+}
+
+.pushl {
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+figcaption {
+	text-align: center;
+}
+
+.fit-item {
+  height: 90%;
+  object-fit: cover;
 }
